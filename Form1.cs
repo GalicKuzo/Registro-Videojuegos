@@ -28,21 +28,22 @@ namespace Registro_Videojuegos
                 MessageBox.Show("Debe llenar los espacios en blanco antes de continuar :)", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            int n = dgv_Datos.Rows.Add();
-            dgv_Datos.Rows[n].Cells[0].Value = Convert.ToString(txt_nombre.Text).ToUpper();
-            dgv_Datos.Rows[n].Cells[1].Value = Convert.ToString(cmbox_resultado.Text).ToUpper();
+            rtxtbox_datos.AppendText("\n");
+            rtxtbox_datos.AppendText("Nombre: " + txt_nombre.Text + "\n");
+            rtxtbox_datos.AppendText("Resultado: " + cmbox_resultado.Text + "\n");
             if (cmbox_resultado.Text == "Victoria")
             {
-                dgv_Datos.Rows[n].Cells[2].Value = "100";
+                rtxtbox_datos.AppendText("Puntos Obtenidos: 100" + "\n");
                 score = score + 100;
                 lbl_puntos.Text = Convert.ToString(score);
             }
             if (cmbox_resultado.Text == "Derrota")
             {
-                dgv_Datos.Rows[n].Cells[2].Value = "-20";
+                rtxtbox_datos.AppendText("Puntos Obtenidos: -20" + "\n");
                 score = score - 20;
                 lbl_puntos.Text = Convert.ToString(score);
             }
+            txt_nombre.Text = "";
         }
 
         private void btn_Guardar_Click(object sender, EventArgs e)
@@ -53,8 +54,10 @@ namespace Registro_Videojuegos
             crear.Close();
             //Escritura del archivo
             FileStream escribir = new FileStream(rutaArchivo, FileMode.Append);
-            byte[] bdata = Encoding.Default.GetBytes("hola");
+            byte[] bdata = Encoding.Default.GetBytes(rtxtbox_datos.Text);
+            byte[] bdata1 = Encoding.Default.GetBytes("\n"+ "Puntos Acumulados: " + score);
             escribir.Write(bdata, 0, bdata.Length);
+            escribir.Write(bdata1, 0, bdata1.Length);
             escribir.Close();
 
             MessageBox.Show("Todos los datos fueron guardados en la siguiente ruta: " + rutaArchivo, "", MessageBoxButtons.OK, MessageBoxIcon.Information);

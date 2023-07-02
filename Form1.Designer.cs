@@ -34,15 +34,11 @@
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.cmbox_resultado = new System.Windows.Forms.ComboBox();
             this.btn_registrar = new System.Windows.Forms.Button();
-            this.dgv_Datos = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_puntos = new System.Windows.Forms.Label();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.resultado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.puntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Guardar = new System.Windows.Forms.Button();
+            this.rtxtbox_datos = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Datos)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -107,25 +103,6 @@
             this.btn_registrar.UseVisualStyleBackColor = true;
             this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
             // 
-            // dgv_Datos
-            // 
-            this.dgv_Datos.AllowUserToAddRows = false;
-            this.dgv_Datos.AllowUserToDeleteRows = false;
-            this.dgv_Datos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Datos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombre,
-            this.resultado,
-            this.puntos});
-            this.dgv_Datos.Location = new System.Drawing.Point(423, 21);
-            this.dgv_Datos.Name = "dgv_Datos";
-            this.dgv_Datos.ReadOnly = true;
-            this.dgv_Datos.RowHeadersVisible = false;
-            this.dgv_Datos.RowHeadersWidth = 80;
-            this.dgv_Datos.RowTemplate.Height = 24;
-            this.dgv_Datos.Size = new System.Drawing.Size(531, 190);
-            this.dgv_Datos.TabIndex = 1;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -145,27 +122,6 @@
             this.lbl_puntos.Size = new System.Drawing.Size(0, 25);
             this.lbl_puntos.TabIndex = 7;
             // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // resultado
-            // 
-            this.resultado.HeaderText = "Resultado";
-            this.resultado.MinimumWidth = 6;
-            this.resultado.Name = "resultado";
-            this.resultado.ReadOnly = true;
-            // 
-            // puntos
-            // 
-            this.puntos.HeaderText = "Puntos Obtenidos";
-            this.puntos.MinimumWidth = 6;
-            this.puntos.Name = "puntos";
-            this.puntos.ReadOnly = true;
-            // 
             // btn_Guardar
             // 
             this.btn_Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,20 +133,28 @@
             this.btn_Guardar.UseVisualStyleBackColor = true;
             this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
+            // rtxtbox_datos
+            // 
+            this.rtxtbox_datos.Location = new System.Drawing.Point(425, 20);
+            this.rtxtbox_datos.Name = "rtxtbox_datos";
+            this.rtxtbox_datos.ReadOnly = true;
+            this.rtxtbox_datos.Size = new System.Drawing.Size(529, 201);
+            this.rtxtbox_datos.TabIndex = 10;
+            this.rtxtbox_datos.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 274);
+            this.Controls.Add(this.rtxtbox_datos);
             this.Controls.Add(this.btn_Guardar);
             this.Controls.Add(this.lbl_puntos);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dgv_Datos);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Datos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,13 +168,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_registrar;
-        private System.Windows.Forms.DataGridView dgv_Datos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_puntos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn resultado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn puntos;
         private System.Windows.Forms.Button btn_Guardar;
+        private System.Windows.Forms.RichTextBox rtxtbox_datos;
     }
 }
 
