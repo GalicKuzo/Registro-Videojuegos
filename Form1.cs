@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,22 @@ namespace Registro_Videojuegos
                 score = score - 20;
                 lbl_puntos.Text = Convert.ToString(score);
             }
+        }
+
+        private void btn_Guardar_Click(object sender, EventArgs e)
+        {
+            //Creacion del archivo
+            string rutaArchivo = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "base_de_informacion.txt");
+            FileStream crear = new FileStream(rutaArchivo, FileMode.Create);
+            crear.Close();
+            //Escritura del archivo
+            FileStream escribir = new FileStream(rutaArchivo, FileMode.Append);
+            byte[] bdata = Encoding.Default.GetBytes("hola");
+            escribir.Write(bdata, 0, bdata.Length);
+            escribir.Close();
+
+            MessageBox.Show("Todos los datos fueron guardados en la siguiente ruta: " + rutaArchivo, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }

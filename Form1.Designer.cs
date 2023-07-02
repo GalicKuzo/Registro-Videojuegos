@@ -40,6 +40,7 @@
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resultado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.puntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Guardar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Datos)).BeginInit();
             this.SuspendLayout();
@@ -122,14 +123,14 @@
             this.dgv_Datos.RowHeadersVisible = false;
             this.dgv_Datos.RowHeadersWidth = 80;
             this.dgv_Datos.RowTemplate.Height = 24;
-            this.dgv_Datos.Size = new System.Drawing.Size(510, 190);
+            this.dgv_Datos.Size = new System.Drawing.Size(531, 190);
             this.dgv_Datos.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(430, 225);
+            this.label3.Location = new System.Drawing.Point(694, 229);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(198, 25);
             this.label3.TabIndex = 6;
@@ -139,7 +140,7 @@
             // 
             this.lbl_puntos.AutoSize = true;
             this.lbl_puntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_puntos.Location = new System.Drawing.Point(628, 225);
+            this.lbl_puntos.Location = new System.Drawing.Point(892, 229);
             this.lbl_puntos.Name = "lbl_puntos";
             this.lbl_puntos.Size = new System.Drawing.Size(0, 25);
             this.lbl_puntos.TabIndex = 7;
@@ -165,11 +166,23 @@
             this.puntos.Name = "puntos";
             this.puntos.ReadOnly = true;
             // 
+            // btn_Guardar
+            // 
+            this.btn_Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Guardar.Location = new System.Drawing.Point(425, 227);
+            this.btn_Guardar.Name = "btn_Guardar";
+            this.btn_Guardar.Size = new System.Drawing.Size(263, 35);
+            this.btn_Guardar.TabIndex = 9;
+            this.btn_Guardar.Text = "Guardar";
+            this.btn_Guardar.UseVisualStyleBackColor = true;
+            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(945, 274);
+            this.ClientSize = new System.Drawing.Size(966, 274);
+            this.Controls.Add(this.btn_Guardar);
             this.Controls.Add(this.lbl_puntos);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgv_Datos);
@@ -197,6 +210,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn resultado;
         private System.Windows.Forms.DataGridViewTextBoxColumn puntos;
+        private System.Windows.Forms.Button btn_Guardar;
     }
 }
 
