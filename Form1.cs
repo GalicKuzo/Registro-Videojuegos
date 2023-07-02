@@ -20,6 +20,7 @@ namespace Registro_Videojuegos
             lbl_puntos.Text = "0";
         }
         int score = 0;
+        //Funcion para registrar los juegos
         private void btn_registrar_Click(object sender, EventArgs e)
         {
             lbl_puntos.Text = Convert.ToString(score);
@@ -45,7 +46,7 @@ namespace Registro_Videojuegos
             }
             txt_nombre.Text = "";
         }
-
+        //Funcion para crear el archivo .txt en el escritorio y guardar los datos
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
             //Creacion del archivo
